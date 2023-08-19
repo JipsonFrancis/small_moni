@@ -1,0 +1,202 @@
+import 'package:flutter/material.dart';
+
+class Login extends StatelessWidget {
+  const Login({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF1461D3),
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(
+                  Icons.arrow_back,
+                  size: 20,
+                  color: Color.fromARGB(255, 255, 255, 255),
+                ),
+                const Text(
+                  "Login",
+                  style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 36,
+                      color: Colors.white),
+                ),
+                const SizedBox(height: 10),
+                // const Text(
+                //   "Welcome back, lets get to managing",
+                //   style: TextStyle(
+                //       fontSize: 15,
+                //       fontWeight: FontWeight.bold,
+                //       color: Color.fromARGB(255, 156, 156, 156),
+                //       fontStyle: FontStyle.normal),
+                // ),
+                // SizedBox(height: 55),
+
+                // email field
+                Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        border: Border.all(
+                            color: const Color.fromARGB(255, 228, 228, 228)),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 20.0),
+                        child: TextField(
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Email",
+                          ),
+                        ),
+                      ),
+                    )),
+                const SizedBox(height: 15.0),
+                // password
+                Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[200],
+                        border: Border.all(
+                            color: const Color.fromARGB(255, 228, 228, 228)),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 20.0),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            suffixIcon: Icon(Icons.lock),
+                            hintText: "password",
+                          ),
+                        ),
+                      ),
+                    )),
+                const SizedBox(height: 25.0),
+
+                //login button
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Container(
+                    padding: const EdgeInsets.all(20),
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 255, 255, 255),
+                        borderRadius: BorderRadius.circular(12.0)),
+                    // ignore: prefer_const_constructors
+                    child: Center(
+                      child: const Text(
+                        "Sign In",
+                        style: TextStyle(
+                          color: Color(0xFF1461D3),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10.0),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(
+                      children: [
+                        Container(
+                          padding: const EdgeInsets.all(8),
+                          decoration: const BoxDecoration(
+                            border: Border(
+                              bottom: BorderSide(
+                                color: Colors.white,
+                                style: BorderStyle.solid,
+                                width: 1,
+                              ),
+                            ),
+                          ),
+                          child: const Text(
+                            "Or",
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    ElevatedButton(
+                      onPressed: () {
+                        // Your code here
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 60, vertical: 5),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      child: const Icon(
+                        Icons.facebook,
+                        size: 20,
+                        color: Color(0xFF1461D3),
+                      ),
+                    ),
+                    const SizedBox(
+                        width: 16), // Adding some spacing between the buttons
+                    ElevatedButton(
+                      onPressed: () {
+                        // Your code here
+                      },
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.white,
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 60, vertical: 5),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                      ),
+                      child: const Icon(
+                        Icons.wordpress,
+                        size: 20,
+                        color: Color(0xFF1461D3),
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "Don't have an acount? ",
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Color.fromARGB(255, 146, 145, 145)),
+                    ),
+                    Text(
+                      "Register",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

@@ -1,0 +1,17 @@
+const runApp(MyApp());
+    issues with the const keyword
+    :class
+        class MyApp extends StatelessWidget {
+            const MyApp(Key? key) : super(key: key);
+
+            @override
+            Widget build(BuildContext context) {
+              return MaterialApp(
+                debugShowCheckedModeBanner: false,
+                home: OnBoarding(UniqueKey()),
+              );
+            }
+        }
+
+    fix:  runApp(MyApp(UniqueKey()));
+const OnBoarding(Key? key) : super(key: key);
