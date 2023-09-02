@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:small_money/classes/transactionCard.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:small_money/classes/transaction_card.dart';
 
 class Tranaction extends StatefulWidget {
   const Tranaction({super.key});
@@ -103,6 +104,83 @@ class _TranactionState extends State<Tranaction> {
             const SizedBox(
               height: 25,
             ),
+            Center(
+              child: Card(
+                elevation: 2, // Add elevation for a card shadow
+                margin: EdgeInsets.all(4), // Adjust margin as needed
+                shape: RoundedRectangleBorder(
+                  borderRadius:
+                      BorderRadius.circular(20), // Increase border radius
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Column(
+                    crossAxisAlignment:
+                        CrossAxisAlignment.start, // Align content to the left
+                    children: [
+                      Text(
+                        'Expenses Trend',
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(height: 10),
+                      Container(
+                        height: 150, // Adjust the graph's height as needed
+                        child: LineChart(
+                          LineChartData(
+                            gridData: FlGridData(show: false),
+                            titlesData: FlTitlesData(show: false),
+                            borderData: FlBorderData(
+                              show: false,
+                              border: Border.all(
+                                color: const Color(0xff37434d),
+                                width: 1,
+                              ),
+                            ),
+                            minX: 0,
+                            maxX: 6,
+                            minY: 0,
+                            maxY: 6,
+                            lineBarsData: [
+                              LineChartBarData(
+                                spots: [
+                                  FlSpot(0, 3),
+                                  FlSpot(1, 1),
+                                  FlSpot(2, 4),
+                                  FlSpot(3, 2),
+                                  FlSpot(4, 5),
+                                  FlSpot(5, 1),
+                                  FlSpot(6, 3),
+                                ],
+                                isCurved: true,
+                                colors: [Colors.blue],
+                                dotData: FlDotData(show: false),
+                                belowBarData: BarAreaData(
+                                  show: true,
+                                  colors: [
+                                    Colors.blue.withOpacity(0.2)
+                                  ], // Set fill color
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+            Row(
+              children: [
+                Container(
+                  child: const TransactionCCard(),
+                )
+              ],
+            )
           ],
         ),
       ),

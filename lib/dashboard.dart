@@ -120,11 +120,11 @@ class _DashboardState extends State<Dashboard> {
             const SizedBox(
               height: 10,
             ),
-            const TransactionCard(),
+            const TransactionCCard(),
             const SizedBox(
               height: 10,
             ),
-            const TransactionCard(),
+            const TransactionCCard(),
           ],
         ),
       ),
