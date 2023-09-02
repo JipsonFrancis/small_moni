@@ -22,21 +22,21 @@ class _TranactionState extends State<Tranaction> {
           children: [
             IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.home,
                   size: 30,
                   color: Color(0xFF1461D3),
                 )),
             IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.wallet,
                   size: 30,
                   color: Color(0xFF1461D3),
                 )),
             IconButton(
                 onPressed: () {},
-                icon: Icon(
+                icon: const Icon(
                   Icons.trending_up_sharp,
                   size: 30,
                   color: Color(0xFF15205A),
@@ -53,7 +53,7 @@ class _TranactionState extends State<Tranaction> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    child: const Icon(
+                    child: Icon(
                       Icons.arrow_back,
                       size: 30,
                       color: Color(0xFF1461D3),
@@ -63,15 +63,10 @@ class _TranactionState extends State<Tranaction> {
                         border: Border.all(width: 2, color: Colors.white),
                         shape: BoxShape.circle),
                   ),
-                  Container(
-                      child: Text(
+                  const Text(
                     "Transactions",
                     style: TextStyle(fontSize: 25, color: Colors.white),
-                  )
-                      // decoration: BoxDecoration(
-                      //     border: Border.all(width: 2, color: Colors.white),
-                      //     shape: BoxShape.circle),
-                      ),
+                  ),
                   Container(
                     padding: const EdgeInsets.all(10),
                     // child: const Icon(
@@ -104,6 +99,9 @@ class _TranactionState extends State<Tranaction> {
                   title: "Total Payments",
                 )
               ],
+            ),
+            const SizedBox(
+              height: 25,
             ),
           ],
         ),
