@@ -113,7 +113,7 @@ class _ProfileState extends State<Profile> {
                             height: 40,
                             decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.blue, // Icon background color
+                              color: Color(0xFF5163BF), // Icon background color
                             ),
                             child: const Icon(
                               Icons
@@ -125,6 +125,149 @@ class _ProfileState extends State<Profile> {
                         ),
                       ],
                     ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    Container(
+                      alignment: Alignment.centerLeft,
+                      margin: const EdgeInsets.all(15),
+                      child: const Text(
+                        "Personal Information",
+                        style: TextStyle(color: Colors.white70, fontSize: 22),
+                      ),
+                    ),
+                    Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        margin: const EdgeInsets.symmetric(horizontal: 15),
+                        height: 38,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(
+                              10), // Adjust border radius as needed
+                          border:
+                              Border.all(color: Colors.grey), // Add a border
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              "Account Number",
+                              style: TextStyle(color: Color(0xFF1461D3)),
+                            ),
+                            Text(
+                              "3024982387",
+                              style: TextStyle(color: Colors.grey[400]),
+                            )
+                          ],
+                        )),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        margin: const EdgeInsets.symmetric(horizontal: 15),
+                        height: 38,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(
+                              10), // Adjust border radius as needed
+                          border:
+                              Border.all(color: Colors.grey), // Add a border
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              "Username",
+                              style: TextStyle(color: Color(0xFF1461D3)),
+                            ),
+                            Text(
+                              "Aryan.Stirk2",
+                              style: TextStyle(color: Colors.grey[400]),
+                            )
+                          ],
+                        )),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        margin: const EdgeInsets.symmetric(horizontal: 15),
+                        height: 38,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(
+                              10), // Adjust border radius as needed
+                          border:
+                              Border.all(color: Colors.grey), // Add a border
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              "Email",
+                              style: TextStyle(color: Color(0xFF1461D3)),
+                            ),
+                            Text(
+                              "aryan.stirk2nd@gmail.com",
+                              style: TextStyle(color: Colors.grey[400]),
+                            )
+                          ],
+                        )),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        margin: const EdgeInsets.symmetric(horizontal: 15),
+                        height: 38,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(
+                              10), // Adjust border radius as needed
+                          border:
+                              Border.all(color: Colors.grey), // Add a border
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              "Mobile Phone",
+                              style: TextStyle(color: Color(0xFF1461D3)),
+                            ),
+                            Text(
+                              "+265 93 2938 2324",
+                              style: TextStyle(color: Colors.grey[400]),
+                            )
+                          ],
+                        )),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 16),
+                        margin: const EdgeInsets.symmetric(horizontal: 15),
+                        height: 38,
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(
+                              10), // Adjust border radius as needed
+                          border:
+                              Border.all(color: Colors.grey), // Add a border
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            const Text(
+                              "Address",
+                              style: TextStyle(color: Color(0xFF1461D3)),
+                            ),
+                            Text(
+                              "Gulliver 49 Ka...",
+                              style: TextStyle(color: Colors.grey[400]),
+                            )
+                          ],
+                        ))
                   ],
                 ),
               )
