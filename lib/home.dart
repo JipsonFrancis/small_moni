@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:small_money/login.dart';
+import 'package:small_money/register.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -32,7 +32,7 @@ class _HomeState extends State<Home> {
           children: [
             Container(
               height: 200,
-              child: const Icon(
+              child: Icon(
                 Icons.android,
                 size: 200,
                 color: Colors.white,
@@ -57,6 +57,10 @@ class _HomeState extends State<Home> {
                     child: TextButton(
                       onPressed: () {
                         // Add your registration logic here
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Login()));
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.white,
@@ -76,6 +80,10 @@ class _HomeState extends State<Home> {
                     child: TextButton(
                       onPressed: () {
                         // Add your registration logic here
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Register()));
                       },
                       style: TextButton.styleFrom(
                         foregroundColor: Colors.blue,
