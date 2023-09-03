@@ -67,11 +67,7 @@ class _PaymentState extends State<Payment> {
                     child: Text(
                   "Pay Loan",
                   style: TextStyle(fontSize: 25, color: Colors.white),
-                )
-                    // decoration: BoxDecoration(
-                    //     border: Border.all(width: 2, color: Colors.white),
-                    //     shape: BoxShape.circle),
-                    ),
+                )),
                 Container(
                   padding: const EdgeInsets.all(10),
                   // child: const Icon(
