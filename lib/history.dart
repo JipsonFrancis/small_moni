@@ -174,7 +174,7 @@ class _HistoryState extends State<History> {
                       child: Column(
                         children: [
                           Row(
-                            children: [
+                            children: const [
                               Text(
                                 "Settled",
                                 style: TextStyle(color: Color(0xFFFFFFFF)),
@@ -188,11 +188,11 @@ class _HistoryState extends State<History> {
                               )
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 10,
                           ),
                           Row(
-                            children: [
+                            children: const [
                               Text("MWK 50 000",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
