@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:small_money/history.dart';
+import 'package:small_money/home.dart';
 
 void main(List<String> args) {
   runApp(MyApp(UniqueKey()));
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: History(),
+      home: Home(),
     );
   }
 }
