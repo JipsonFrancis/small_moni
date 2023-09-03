@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:small_money/transactions.dart';
+import 'package:small_money/dashboard.dart';
+import 'package:small_money/payment.dart';
 import 'package:small_money/classes/transaction_card.dart';
 
 class History extends StatefulWidget {
@@ -16,31 +17,44 @@ class _HistoryState extends State<History> {
     return Scaffold(
       backgroundColor: const Color(0xFF1461D3),
       bottomNavigationBar: BottomAppBar(
-        padding: const EdgeInsets.symmetric(horizontal: 25),
+        padding: EdgeInsets.symmetric(horizontal: 25),
         height: 60,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-                onPressed: () {},
-                icon: const Icon(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Dashboard()));
+                },
+                icon: Icon(
                   Icons.home,
                   size: 30,
-                  color: Color(0xFF1461D3),
+                  color: Color(0xFF15205A),
                 )),
             IconButton(
-                onPressed: () {},
-                icon: const Icon(
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Payment()));
+                },
+                icon: Icon(
                   Icons.wallet,
                   size: 30,
                   color: Color(0xFF1461D3),
                 )),
             IconButton(
-                onPressed: () {},
-                icon: const Icon(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Tranaction()));
+                },
+                icon: Icon(
                   Icons.trending_up_sharp,
                   size: 30,
-                  color: Color(0xFF15205A),
+                  color: Color(0xFF1461D3),
                 ))
           ],
         ),

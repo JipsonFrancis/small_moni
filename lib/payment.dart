@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:small_money/transactions.dart';
+import 'package:small_money/dashboard.dart';
 
 class Payment extends StatefulWidget {
   const Payment({super.key});
@@ -21,21 +21,34 @@ class _PaymentState extends State<Payment> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Dashboard()));
+                },
                 icon: Icon(
                   Icons.home,
-                  size: 30,
-                  color: Color(0xFF1461D3),
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.wallet,
                   size: 30,
                   color: Color(0xFF15205A),
                 )),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Payment()));
+                },
+                icon: Icon(
+                  Icons.wallet,
+                  size: 30,
+                  color: Color(0xFF1461D3),
+                )),
+            IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Tranaction()));
+                },
                 icon: Icon(
                   Icons.trending_up_sharp,
                   size: 30,

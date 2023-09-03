@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:small_money/classes/card.dart';
 import 'package:small_money/classes/transaction_card.dart';
+import 'package:small_money/history.dart';
+import 'package:small_money/payment.dart';
+import 'package:small_money/transactions.dart';
 
 class Dashboard extends StatefulWidget {
   const Dashboard({super.key});
@@ -21,21 +24,34 @@ class _DashboardState extends State<Dashboard> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Dashboard()));
+                },
                 icon: Icon(
                   Icons.home,
                   size: 30,
                   color: Color(0xFF15205A),
                 )),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const Payment()));
+                },
                 icon: Icon(
                   Icons.wallet,
                   size: 30,
                   color: Color(0xFF1461D3),
                 )),
             IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const Tranaction()));
+                },
                 icon: Icon(
                   Icons.trending_up_sharp,
                   size: 30,
@@ -66,14 +82,18 @@ class _DashboardState extends State<Dashboard> {
                   ),
                   Container(
                     padding: const EdgeInsets.all(10),
-                    child: const Icon(
-                      Icons.notifications_outlined,
-                      size: 30,
-                      color: Color.fromRGBO(255, 255, 255, 1),
-                    ),
-                    // decoration: BoxDecoration(
-                    //     border: Border.all(width: 2, color: Colors.white),
-                    //     shape: BoxShape.circle),
+                    child: IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const History()));
+                        },
+                        icon: Icon(
+                          Icons.notifications_outlined,
+                          size: 30,
+                          color: Color(0xFFFFFFFF),
+                        )),
                   )
                 ],
               ),

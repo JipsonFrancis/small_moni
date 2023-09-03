@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:small_money/dashboard.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -89,13 +90,33 @@ class Login extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12.0)),
                     // ignore: prefer_const_constructors
                     child: Center(
-                      child: const Text(
-                        "Sign In",
-                        style: TextStyle(
-                          color: Color(0xFF1461D3),
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
+                      // child: const Text(
+                      //   "Sign In",
+                      //   style: TextStyle(
+                      //     color: Color(0xFF1461D3),
+                      //     fontWeight: FontWeight.bold,
+                      //     fontSize: 20,
+                      //   ),
+                      // ),
+                      child: TextButton(
+                        onPressed: () {
+                          // Add your registration logic here
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const Dashboard()));
+                        },
+                        style: TextButton.styleFrom(
+                          foregroundColor: Colors.blue,
+                          backgroundColor: Colors.white,
+                          textStyle: const TextStyle(fontSize: 25),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(4.0),
+                            side: const BorderSide(
+                                color: Colors.white), // Border color
+                          ),
                         ),
+                        child: const Text("Sign In"),
                       ),
                     ),
                   ),
